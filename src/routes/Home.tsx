@@ -1,38 +1,12 @@
 import React from 'react';
-import { Text, View } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import { BasketScreen } from '@/features/basket/screens';
+import { DeliveryScreen } from '@/features/delivery/screens';
+import { PreparingOrderScreen } from '@/features/order/screens';
+import { RestaurantScreen } from '@/features/restaurants/screens';
+import { HomeScreen } from '@/screens';
 import { HomeStackParamList } from '@/types';
-
-const HomeScreen = () => (
-  <View>
-    <Text>Home</Text>
-  </View>
-);
-
-const RestaurantScreen = () => (
-  <View>
-    <Text>Restaurant</Text>
-  </View>
-);
-
-const BasketScreen = () => (
-  <View>
-    <Text>Basket</Text>
-  </View>
-);
-
-const PreparingOrderScreen = () => (
-  <View>
-    <Text>Preparing Order</Text>
-  </View>
-);
-
-const DeliveryScreen = () => (
-  <View>
-    <Text>Delivery</Text>
-  </View>
-);
 
 const Stack = createNativeStackNavigator<HomeStackParamList>();
 export const Home = () => {
