@@ -7,8 +7,13 @@ import {
 import { configureStore } from '@reduxjs/toolkit';
 
 import { apiSlice } from '@/api/apiSlice';
+import { basketSliceReducer } from '@/features/basket/store/basketSlice';
+import { restaurantSliceReducer } from '@/features/restaurants/store/restaurantSlice';
 
-const reducers = {};
+const reducers = {
+  basket: basketSliceReducer,
+  restaurant: restaurantSliceReducer,
+};
 
 export const store = configureStore({
   reducer: {
