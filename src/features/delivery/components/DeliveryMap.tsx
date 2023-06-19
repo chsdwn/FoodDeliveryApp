@@ -1,6 +1,7 @@
 import React from 'react';
 import MapView, { Marker } from 'react-native-maps';
 
+import { IS_IOS } from '@/config';
 import { colors } from '@/config/theme';
 
 type IProps = {
@@ -24,7 +25,7 @@ export const DeliveryMap = ({
         longitudeDelta: 0.005,
       }}
       className="flex-1 -mt-10 z-0"
-      mapType="mutedStandard"
+      mapType={IS_IOS ? 'mutedStandard' : 'standard'}
     >
       <Marker
         coordinate={{
